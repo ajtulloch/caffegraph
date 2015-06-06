@@ -1,4 +1,7 @@
 * DNNGraph - A deep neural network model generation DSL in Haskell
+
+  #+ATTR_HTML: title="Join the chat at https://gitter.im/ajtulloch/dnngraph"
+  [[https://gitter.im/ajtulloch/dnngraph?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge][file:https://badges.gitter.im/Join%20Chat.svg]]
 It consists of several parts:
 
 - A DSL for specifying the model. This uses the [[http://lens.github.io/][lens]] library for
