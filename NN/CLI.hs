@@ -15,11 +15,11 @@ import           Options.Applicative   hiding ((&))
 import           System.Exit
 import           System.FilePath.Posix
 import           System.Process
-import           Text.ProtocolBuffers  as P
+import qualified Text.ProtocolBuffers  as P
 
 caffePrototxt :: NetBuilder a -> FilePath -> String -> IO ()
 caffePrototxt net prototxtPath binaryToText' = do
-  parse net & Caffe.middleEnd & Caffe.backend & messagePut & BS.writeFile binaryPath
+  parse net & Caffe.middleEnd & Caffe.backend & P.messagePut & BS.writeFile binaryPath
   rawSystem binaryToText' [binaryPath, prototxtPath] >>= exitWith
     where
       binaryPath = prototxtPath <.> "protobinary"
